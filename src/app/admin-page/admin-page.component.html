@@ -1,0 +1,66 @@
+<div id="mega-container">
+  <header id="header">
+      <div class="head-div">
+          <ul class="head-list">
+              <li class="head-list-item">
+                  <a routerLink="/admin/home">
+                      <div id="logo"> </div>
+                  </a>
+              </li>
+              <li class="head-list-item">
+                  
+                <div id="dp">
+                    <img src="../../assets/images/Admin.png" alt="Admin" style="width:170px; height:170px">
+                </div>
+                  
+              </li>
+              <li id="bootswatch-item" class="head-list-item">
+                  <a routerLink="/admin" style="text-decoration: none; color: black">
+                      <button type="button" id="bootswatch-button" class="btn btn-outline-secondary">Logout</button>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </header>
+  <br />
+  <div id="body">
+      <div class="nav">
+          <nav class="in-nav">
+              <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a routerLink="accounts" class="nav-links">Accounts </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a routerLink="news" class="nav-links">News</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a routerLink="social" class="nav-links">Social</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a routerLink="game" class="nav-links">Game </a>
+                    </li>
+              </ul>
+          </nav>
+      </div>
+      <div id="internal-body">
+          <!-- Got to replace from here-->
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+  <footer>
+    <div style="background-color: white; height: 130px; width: 100%; text-align: center;" >
+        <div class="row" style="text-align: center; width: 40%; margin: 0% 30%; padding: 1% 0%">
+          <div class="col-sm-6" style="width: 50%; margin: 0% 25%">
+            <img style="width: 50px; height: 50px;" src="../../assets/images/Whatapp.png">
+            <img style="width: 50px; height: 50px;" src="../../assets/images/Fb.png">
+            <img style="width: 50px; height: 50px;" src="../../assets/images/Gmail.png">
+            <img style="width: 50px; height: 50px;" src="../../assets/images/twitter.png">
+                                
+          </div>
+          
+                            
+        </div>
+                          
+      </div>
+</footer>
+</div>

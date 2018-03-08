@@ -1,0 +1,21 @@
+#Change{
+    background-color: DarkGrey;
+    border:0px solid;
+    color: White;
+    width: auto;
+    font-size: 20px;
+    float: right;
+    margin-top: 2%;
+    margin: 1% 1% 1% 1%;
+    }
+    
+    #Change:hover{
+    background-color: #2a2a2a;
+    
+    
+    }
+    
+    #S:hover{
+    
+    border-bottom: 3px solid Red;
+    }

@@ -1,0 +1,103 @@
+<div id="mega-container">
+    <header id="header">
+        <div class="head-div">
+            <ul class="head-list">
+                <li class="head-list-item">
+                    <a routerLink="/blank">
+                        <div id="logo"> </div>
+                    </a>
+                </li>
+                <li class="head-list-item">
+                    <a class="dp-link" (click)="NavigateToProfile()">
+                        <div id="dp">
+                            <img src="{{ProfilePicture}}" alt="{{username}}" style="max-width:170px">
+                        </div>
+                    </a>
+                </li>
+                <li class="head-list-item" style="width: 300px">
+                    <div id="profile-description">
+                        <ul class="profile-description-items">
+                            <li class="profile-description-list-items">
+                                <ul class="profile-list">
+                                    <li style="font-size: 25px; color: yellow; list-style-type: none">
+                                        {{username}}
+                                    </li>
+                                    <br>
+                                    <li class="profile-list-item"> Points:</li>
+                                    <li class="profile-list-item"> Level:</li>
+                                    <li class="profile-list-item"> Connections:</li>
+                                </ul>
+                            </li>
+
+                            <li class="profile-description-list-items">
+                                <ul class="profile-list-values">
+                                    <li class="profile-list-values-items">{{points}}</li>
+                                    <li class="profile-list-values-items">{{level}} </li>
+
+                                    <li class="profile-list-values-items">{{connections}}</li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li style="padding-top: 10px;">
+                    <img id="novice" src="../../assets/images/Novice.png" style="border-radius:15px; display: none; width: 80px; height:70px;">
+                    <img id="bronze" src="../../assets/images/bronze.jpg" style="border-radius:15px; display: none; width: 80px; height:70px;">
+                    <img id="silver" src="../../assets/images/silver.jpg" style="border-radius:15px; display: none; width: 80px; height:70px;">
+                    <img id="gold"   src="../../assets/images/gold.jpg"   style="border-radius:15px; display: none; width: 80px; height:70px;">
+                    <img id="platinum" src="../../assets/images/platinum.jpg" style="border-radius:15px; display: none; width: 80px; height:70px;">
+                </li>
+                <li id="bootswatch-item" class="head-list-item">
+                    <a routerLink="/" style="text-decoration: none; color: black" (click)="logout()">
+                        <button type="button" id="bootswatch-button" class="btn btn-outline-secondary">
+                            <span class="glyphicon glyphicon-log-out"></span> Logout</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <br />
+    <div id="body">
+        <div class="nav">
+            <nav class="in-nav">
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a routerLink="news" id="news" class="nav-links" (click)="toggleNews()" style="font-size: 20px">News
+                            <span class="glyphicon glyphicon-globe"></span>
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a routerLink="social" id="social" class="nav-links" (click)="toggleSocial()" style="font-size: 20px">Social
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a routerLink="game" id="game" class="nav-links" (click)="toggleGame()" style="font-size: 20px">Game </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="internal-body">
+            <!-- Got to replace from here-->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <footer id="footer_">
+
+
+
+        <div style="background-color: black; height: 150px; width: 100%; text-align: center">
+            <div class="row" style="text-align: center; width: 40%; margin: 0% 30%; padding: 1% 0%">
+                <br>
+                <br>
+
+
+            </div>
+
+        </div>
+    </footer>
+</div>

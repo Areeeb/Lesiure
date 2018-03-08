@@ -1,0 +1,114 @@
+<div id="Body_" style="height:auto">
+    <div style=" text-align:center; margin-bottom:50px">
+        <a class="PostButton" style="text-decoration:none; width:500px;font-size: 20px;" (click)="id01.style.display='block'">
+            <span class="glyphicon glyphicon-pencil" id="T" style="float: left"> Make Post |</span>
+            <span class="glyphicon glyphicon-picture" id="T" style="padding-right:58%"> Add Picture</span>
+
+            <textarea style="color:white; cursor:pointer; background-color:transparent" class="form-control" id="comments" name="comments"
+                rows="10"></textarea>
+            <button id="Button_" style="width: 10%; background-color: #2a6592; color:white; float:right; 
+                                                    font-size:20px; display: inline-block;
+                                                    border: 1px solid #ccc;box-sizing: border-box;" align="right" type="submit">Post</button>
+        </a>
+    </div>
+    <div id="id01" class="modal" style=" display: none;overflow-y: scroll" #id01>
+
+        <form class="modal-content animate" style="margin: 3% auto 15% auto;width: 40%; height: auto; background-color: White; box-shadow: 5px 5px 5px 5px Black;">
+
+            <div>
+
+                <span (click)="id01.style.display='none'" class="close" title="Close Modal">&times;</span>
+                <br />
+
+
+            </div>
+            <div class="row">
+                <div style="text-align:center" class="col-sm-6">
+                    <a class="MyStyle_" style="width:auto;font-size: 20px;text-decoration:none" (click)="Type.style.display='block';
+                                                            Pic.style.display='none';">
+                        <span class="glyphicon glyphicon-font"></span>
+                        Type Anything
+                    </a>
+                </div>
+                <div style="text-align:center" class="col-sm-6">
+                    <a class="MyStyle_" style="width:auto;font-size: 20px; text-decoration:none" (click)="Pic.style.display='block';
+                                                            Type.style.display='none';">
+                        <span class="glyphicon glyphicon-picture"></span>
+                        Add Picture
+                    </a>
+                </div>
+            </div>
+            <div style="display: block" rows="5" #Type>
+                <textarea class="form-control" id="comments" name="comments" placeholder="~Type A Post" rows="12" [(ngModel)]="TextPost"></textarea>
+                <br>
+
+
+            </div>
+            <div style="display: none" rows="5" #Pic>
+                <textarea class="form-control" id="comments" name="comments" rows="8"></textarea>
+                <br>
+                <input id="fld1" type="file" name="pic" accept="image/*" (change)="fileEvent($event)">
+                <textarea class="form-control" id="comments" name="comments" placeholder="~Caption" rows="2" [(ngModel)]="TextPost"></textarea>
+                <br>
+            </div>
+
+            <a class="ButtonLink" (click)="postData()">
+                {{ShareButton}}
+            </a>
+
+
+
+
+        </form>
+    </div>
+
+
+</div>
+<div id="post-body" *ngFor="let post of Postlist" [ngClass]="{'is-active': post.isActive}">
+    <ul class="post-list">
+        <li class="post-list-items" id="left">
+            <div id="left-block">
+                <ul class="left-block-list">
+                    <li class="left-block-list-big">
+                            <div style="position: relative; top: 15px;right: 9px">
+                                    <span style="font-size: 20px; color: white;">{{post.username}}</span>    
+                            </div> 
+                        <div class="picture-host">
+                            <a class="text" style="height: 160px; width: 160px">
+                                <img src="{{post.profilePicture}}" alt="image" style="height: 160px; width: 160px; float: left">
+                                
+                            </a>
+                        </div>
+                        
+                    </li>
+                    <li class="left-block-list-small">
+                        <div class="action" id="like"  #like (click)="LikeReaction(like, post.caption, post.imageUrl, post.likes, post.comments, post.shares, post.userid, post.id)">
+                            <a class="text">{{post.likes}}</a>
+                        </div>
+                    </li>
+                    <li class="left-block-list-small">
+                        <div class="action" id="comment" #comment (click)="CommentReaction(comment, post.caption, post.imageUrl, post.likes, post.comments, post.shares, post.userid, post.id)">
+                            <a class="text">{{post.comments}}</a>
+                        </div>
+                    </li>
+                    <li class="left-block-list-small">
+
+                        <div class="action" id="share" #share (click)="ShareReaction(share, post.caption, post.imageUrl, post.likes, post.comments, post.shares, post.userid, post.id)">
+                            <a class="text">{{post.shares}}</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="post-list-items" id="right">
+            <div id="right-block">
+                <div *ngIf="post.imageUrl" class="image">
+                    <img src="{{post.imageUrl}}" alt="Image" style="max-width: 100%">
+                </div>
+                <div *ngIf="post.caption" class="caption">
+                    <p class="text" style="font-size: 20px">{{post.caption}}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

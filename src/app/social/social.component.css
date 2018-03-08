@@ -1,0 +1,336 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 7, 2017, 10:21:12 PM
+    Author     : Areeb
+*/
+
+#Body_{
+	margin: 2% 10%;
+    padding:0;
+    width: 80%;
+}
+
+
+/* Set a style for all buttons */
+#button_ {
+    background-color: #2a6592;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    text-align:center;
+    float: left;
+}
+
+.ButtonLink{
+    text-decoration: none;
+    font-size:20px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 12px 10px;
+    margin: 10px 10px 10px 20px;
+}
+
+.ButtonLink:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #2a6592;
+}
+
+#button_:hover {
+    opacity: 0.8;
+    border: 2px solid black;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #7e9a9a;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+	
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 0%;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #000000;
+    border: 1px solid #888;
+    width: 35%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+.PostButton:Hover{
+cursor:pointer;
+color:white;
+}
+
+.T:Hover{
+color: white;
+
+}
+
+.MyStyle_:hover{
+    cursor: pointer;
+    color: black;
+}
+/*
+#post-now{
+    height: 200px;
+    width: 80%;
+    margin: 2% 10%;
+    background-color: rgb(226, 226, 219);
+}
+
+#post-now .post-now-list{
+    list-style-type: none;
+    height: 200px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 0;
+}
+
+#post-now .post-now-list .post-now-list-item{
+    display: inline-block;
+    height: 180px;
+    margin: 10px 5%;
+    float: left;
+}
+
+#post-now .post-now-list #caption{
+    width: 20%;
+}
+
+#post-now .post-now-list #input{
+    width: 60%;
+}
+
+#post-now .post-now-list #input .posting-box{
+    width: 100%;
+    height: 100px;
+    margin: 2px 0px;
+}
+
+#post-now .post-now-list #input .posting-box .post-input{
+    width: 100%;
+    height: 130px;
+}
+
+#post-now .post-now-list #input .posting-box .button-list{
+    width: 100%;
+    height: 50%;
+    list-style-type: none;
+    padding:0px;
+}
+
+#post-now .post-now-list #input .posting-box .button-list .button-list-items{
+    display: inline-block;
+    width: 49.7%;
+    height: 100%;
+}
+
+#post-now .post-now-list #input .posting-box .button-list .button-list-items .button{
+    border: 2px solid white;
+    border-radius: 20%;
+    float: right;
+    color: white;
+    background-color: black;
+    padding: 10px 20px; 
+}*/
+
+#post-body{
+    width: 80%;
+    margin: 2% 10%;
+    background: #000000;
+}
+
+#post-body .post-list{
+    width: 100%;
+    margin: 5px 0px;
+    float: left;
+    padding: 0px 0px;
+    border: 3px solid white;
+}
+
+#post-body .post-list .post-list-items{
+    display: inline-block;
+    float: left;
+    margin: 0px 5px;
+}
+
+#post-body .post-list #left{
+    width: 25%;
+    /*display: box;*/
+    display: flex;
+}
+
+#post-body .post-list #left #left-block{
+    
+    width: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    float: left;
+}
+
+#post-body .post-list #left #left-block .left-block-list{
+    /*display: box;*/
+    width: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    float: left;
+}
+
+#post-body .post-list #left #left-block .left-block-list .left-block-list-big, #post-body .post-list #left #left-block .left-block-list .left-block-list-small{
+    list-style-type: none;
+    text-align: center;
+    float: left;
+}
+
+#post-body .post-list #left #left-block .left-block-list .left-block-list-big{
+    height: 200px;
+    width: 100%;
+}
+
+#post-body .post-list #left #left-block .left-block-list .left-block-list-small{
+    height: 100px;
+    width: 100%;
+}
+
+#post-body .post-list #left #left-block .left-block-list .left-block-list-big .picture-host{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 10% 15%;
+    overflow: hidden;
+}
+
+#post-body .post-list #left #left-block .left-block-list .left-block-list-small .action{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 5% 32%;
+} 
+
+#post-body .post-list #left #left-block .left-block-list .left-block-list-small .action:hover{
+    border: 5px solid yellow;
+}
+
+#post-body .post-list #left #left-block .left-block-list .left-block-list-small #like{
+    background-image: url("like.jpg");
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#post-body .post-list #left #left-block .left-block-list .left-block-list-small #comment{
+    background-image: url("comment.jpg");
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#post-body .post-list #left #left-block .left-block-list .left-block-list-small #share{
+    background-image: url("share.jpg");
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#post-body .post-list #left #left-block .left-block-list .left-block-list-small .action .text{
+    text-decoration: none;
+    position: relative;
+    top: 25px;
+    color: white;
+    font-size: 25px;
+}
+
+#post-body .post-list #left #left-block .left-block-list .left-block-list-small .action .text:hover{
+    color: yellow;
+    cursor: pointer;
+}
+
+#post-body .post-list #right{
+    width: 72%;
+    height: 100%;
+    /*display: box;*/
+}
+
+#post-body .post-list #right #right-block .image{
+    width: 100%;
+    margin: 2% 0%;
+    text-align: center;
+    
+}
+
+#post-body .post-list #right #right-block .caption{
+    width: 90%;
+    min-height: 150px;
+    margin: 10% 5%;
+    color: white;
+}

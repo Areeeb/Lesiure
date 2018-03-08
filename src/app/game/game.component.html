@@ -1,0 +1,181 @@
+<div id="block1" style="background-color: black">
+	<div class="container" style='height: 650px; width: 100%; color: white'>
+		<div class="row" style="border: 1px solid black; background-color: teal; height: 150px; width: 105%;">
+			<h2>Level: {{UserLevel}} </h2>
+			<h4>Points to next level: </h4>
+			<h4>Perks unlocked: {{perks}} </h4>
+			<h4>Next unlock: </h4>
+		</div>
+		<div class="row" style="height: 500px; width: 105%">
+			<div class="col-sm-3" style="height: 500px;">
+				<a (click)="switch('sports')">
+					<div class="hovereffect" style="width: 100%">
+						<img class="img-responsive" src="../../assets/images/Sports.jpg" alt="ERROR" style="height: 500px">
+						<div class="overlay">
+							<h3>Sports</h3>
+							<h4>Points Earned: </h4>
+							<a >Start</a>
+						</div>
+					</div>
+				</a>
+			</div>
+
+				<!--
+				<h3>Sports</h3>
+				<h4>Points Earned: </h4>
+				<button style="color: black; border: 1px solid black;" (click)="switch('sports')">Start</button>
+
+			-->
+
+			<div class="col-sm-3" style="height: 500px;">
+				<a (click)="switch('general')">
+					<div class="hovereffect" style="width: 100%">
+						<img class="img-responsive" src="../../assets/images/General.jpg" alt="ERROR" style="height: 500px">
+						<div class="overlay">
+							<h3>General</h3>
+							<h4>Points Earned: </h4>
+							<a href="#">Start</a>
+						</div>
+					</div>
+				</a>
+			</div>
+
+				<!--
+				<h3>General</h3>
+				<h4>Points Earned: </h4>
+				<button style="color: black; border: 1px solid black;" (click)="switch('general')">Start</button>-->
+			
+			<div class="col-sm-3" style="height: 500px;">
+				<a (click)="switch('movies')">
+					<div class="hovereffect" style="width: 100%;">
+						<img class="img-responsive" src="../../assets/images/Movies.jpg" alt="ERROR" style="height: 500px">
+						<div class="overlay">
+							<h3>Movies</h3>
+							<h4>Points Earned: </h4>
+							<a href="#">Start</a>
+						</div>
+					</div>
+				</a>
+				</div>
+
+				<!--
+				<h3>Movies</h3>
+				<h4>Points Earned: </h4>
+				<button style="color: black; border: 1px solid black;" (click)="switch('movies')">Start</button>-->
+
+				<div class="col-sm-3" style="height: 500px;">
+					<a (click)="switch('cars')">						
+						<div class="hovereffect" style="width: 100%;">
+							<img class="img-responsive" src="../../assets/images/Cars.jpg" alt="ERROR" style="height: 500px">
+							<div class="overlay">
+								<h3>Cars</h3>
+								<h4>Points Earned: </h4>
+								<a href="#">Start</a>
+							</div>
+						</div>	
+					</a>
+				</div>
+		</div>
+					<!--
+				<h3>Cars</h3>
+				<h4>Points Earned: </h4>
+				<button style="color: black; border: 1px solid black;" (click)="switch('cars')">Start</button>-->
+	</div>
+</div>
+
+
+<div id="Body_" style="height: 100%;background-color: Teal; width: auto;color: White;display: none;">
+ 
+	<!--<audio id="audio1" src="../../assets/audio1.mp3" autoplay loop></audio>-->
+	<div>
+		<div id="questions">
+			<h1 id="Header" style="width: 100%;margin-top:1%;box-shadow: 5px 5px 4px #444444; background-color:Black;color:White; text-align: center;"
+				#Header>Test Yourself
+			</h1>
+
+			<div class="row" style="width: 100%; margin-top: 2%; margin-bottom:2%">
+
+					<a ><img src="../../assets/images/gamehome.jpg" style="border-radius:40px; width:50px; height:50px; float:left; color:antiquewhite; margin-left: 20px; font-size:20px; 
+						background-color:#222930; border: 2px #222930;" (click)="reverse()">
+					</a>
+
+					<a id="undo" style="visibility: none;">
+						<img src="../../assets/images/undo.png" style="border-radius:40px; width:50px; height:50px; float:right; color:antiquewhite; margin-left: 85%; font-size:20px; 
+						background-color:#222930; border: 2px #222930;" (click)="undo()">
+					</a>
+
+			</div>
+
+
+
+			<h1 id="Q1_" style="width: 100%;margin-top:1%;box-shadow: 5px 5px 4px #444444; background-color:Black;color:White; text-align:center; display: block ">Question {{questionNum}}</h1>
+			<br/>
+			<br/>
+			<br/>
+			<div style="width:80%; font-size:30px; margin-left: 10%; padding-top:1%;padding-bottom:1%; background-color: #222930; color: #4EB1BA">
+				<h1 style="width: 70%; margin-left:15%">{{ques}}</h1>
+				<input style="font-size: 30px;float: center;margin-left: 10%;" id="O1" type="Radio" name="Options" value="{{opt1}}" [(ngModel)]="buttonChecked">{{opt1}}
+				<br/>
+				<input style="font-size: 30px;float: center;margin-left: 10%;" id="O2" type="Radio" name="Options" value="{{opt2}}" [(ngModel)]="buttonChecked">{{opt2}}
+				<br/>
+				<input style="font-size: 30px;float: center;margin-left: 10%;" id="O3" type="Radio" name="Options" value="{{opt3}}" [(ngModel)]="buttonChecked">{{opt3}}
+				<br/>
+				<input style="font-size: 30px;float: center;margin-left: 10%;" id="O4" type="Radio" name="Options" value="{{opt4}}" [(ngModel)]="buttonChecked">{{opt4}}
+				<br/>
+			</div>
+
+			<button id="Change" style="display: none" (click)="ChangeQuestion()">Next</button>
+			<button id="Check" style="display: block" (click)="Option()" #Check>Check</button>
+			<button id="Result" style="display: none" (click)="ShowResult()">Show Result</button>
+			<br/>
+			<br/>
+			<br/>
+			<h3 id="S" style=" background-color: white;display:block; width: 30%; margin-left:35%; margin-right:35%; text-align:center; color:Black;">Score 0</h3>
+			<h1 id="Response_1" style="display:none; width: 30%; margin-left:35%; margin-right:35%; text-align:center; background-color:Green">
+				Correct Answer</h1>
+			<h1 id="Response_2" style="display:none; width: 30%;margin-left:35%; margin-right:35%; text-align:center; background-color:Red">
+				InCorrect Answer</h1>
+			<br/>
+
+			<div id="Result_" style="display:none">
+				<h1 id="Q10" style="width: 100%;margin-top:-4%;box-shadow: 5px 5px 4px #444444; background-color:Black;color:White; text-align:center ">Result</h1>
+				<br/>
+				<br/>
+				<br/>
+				<div style="width:80%; font-size:30px; margin-left: 10%; padding-top:1%;padding-bottom:1%; background-color: #222930; color: #4EB1BA">
+					<h1 style="text-align:center; color:White; font-size: 40px">Well Done!</h1>
+					<br/>
+				
+					<br/>
+
+					<br/> Total Questions :
+					<span style="color: Red"> {{len}} </span>
+					<br/> Correct Answer(s) :
+					<h1 id="R" style="width: 20%;margin-left: 40%; margin-top:1%; background-color:White;color:Black; text-align:center ">
+
+					</h1>
+					Achieved Points :
+					<h1 id="P" style="width: 20%;margin-left: 40%; margin-top:1%;box-shadow: 3px 3px 3px yellow; background-color:White ;text-shadow: 1px 1px 1px Teal;color:Black; text-align:center ">
+
+					</h1>
+
+				</div>
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+		<button id="Hint" style="visibility: none; color: black;" (click)='hint()'>Hint</button>
+		<div class="hints" style="visibility: none;">
+			{{hint_}}
+		</div>
+
+	<a style="text-decoration: none; font-size: 40px" (click)="volumeToggle()">
+		<span class="{{volume}}"></span>
+	</a>
+
+</div>
+

@@ -1,0 +1,221 @@
+<div id="Body_">
+  <header id="Header_">
+    <nav class="navbar navbar-form">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li>
+            <a style="width:auto;" onclick="document.getElementById('id02').style.display='block'">
+              <span class="glyphicon glyphicon-log-in"></span> Login</a>
+            <div id="id02" class="modal">
+
+              <form class="modal-content animate" style=" margin: 10% auto 15% auto;width: 40%; height: auto;background-color: White; box-shadow: 5px 5px 5px 5px Yellow;"
+                action="/action_page.php">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <img style="width: 25%; height: 25%" src="../../assets/images/img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div style="width: auto; height: auto" class="container">
+                  <label id="prompt" style="color:red; visibility: hidden">Invalid Login</label><br />
+                  <label>
+                    <b>Username</b>
+                  </label>
+                  <input id="input_" type="text" placeholder="Enter Username" name="uname" required #username>
+                  <br/>
+                  <label>
+                    <b>Password</b>
+                  </label>
+                  <input id="input_" type="password" placeholder="Enter Password" name="psw" required #password>
+                  <br/>
+                  <button id="Button_" style="width: 20%;padding: 12px 10px;margin: 10px 10px 10px 200px;display: inline-block;
+  border: 1px solid #ccc;box-sizing: border-box;" align="center" type="submit" (click)="login(username.value, password.value)">Login</button>
+                  
+
+                  <button id="Button_" style="width: 20%;
+  padding: 12px 10px;  margin: 10px 10px ; display: inline-block;   border: 1px solid #ccc; box-sizing: border-box;
+" type="button" onclick="document.getElementById('id02').style.display='none'" align="center" class="cancelbtn">Cancel </button>
+                  
+                </div>
+              </form>
+            </div>
+
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+  <div style="width: 100%; margin-top: -50px; height: 300px; background-color: yellow">
+    <img src="../../assets/images/baner.png" alt="baner" style="height: 100%; width: 50%;margin: 0% 25%">
+          
+  </div>
+
+
+
+  <div style="background-color: Black" id="Section_1">
+
+    <div id="about" class="container-fluid">
+      <h2 style="text-align:left; font-size: 40px; color: White; font: bold;">What We Do?</h2>
+      <div class="row">
+        <div class="col-sm-9">
+          <p style="color: Yellow; text-align: justify;">
+            Learn and implement design and interaction rules to make responsive, fast and quality applications focusing on new technologies inorder to move along with the world.
+          </p>
+        </div>
+        <div class="col-sm-3">
+          <img src="../../assets/images/Chart_1.jpg">
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-grey">
+      <div class="row">
+        <div class="col-sm-3">
+          <img src="../../assets/images/Chart_2.jpg">
+        </div>
+        <div class="col-sm-9">
+          <h2 style="text-align:right; font-size: 40px; color: White; font: bold;">Our History</h2>
+          <p style="color: Yellow; text-align: justify;">
+            Dealing with clients overwelming them with our performance. We have outruled the market with our contents, work and quality.
+            We have always been and always will be focusing on user satisfaction. We have always believed that If our user has a problem, it is our problem. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="text-align:left; font-size: 40px; color: White; font: bold;"> Our Vision</h3>
+    <div class="container-fluid bg-grey">
+      <div class="row">
+        <div class="col-sm-9">
+          <p style="color: Yellow; font-size: 15; text-align: justify;"> "Our mission is simple: make technology an asset for your business not a problem. Too many times we have seen other
+            IT consulting firms recommend solutions that are not appropriate for the specific client’s business or will not
+            take a business’ operations into their planning as they routinely bring down an entire business while they perform
+            routine maintenance on a server. That is unacceptable. We won’t bring you down in the middle of the day because
+            it is “a better time for us”. We work around your business. We strive to make technology integrate seamlessly
+            with your business so your business can grow. As your technology partner, when your business grows ours will
+            grow with you, therefore, we will work hand in hand with you to support your growth."</p>
+        </div>
+        <div class="col-sm-3">
+          <img src="../../assets/images/Chart_3.jpg">
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div id="Section_2">
+
+    <div style="position: relative; background-color: white;" id="services" class="container-fluid text-center">
+      <h2>SERVICES</h2>
+      <h4>What we have for You!</h4>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="../../assets/images/Game.jpg">
+          <a href="#" id="S" style="width:auto;" onclick="document.getElementById('id02').style.display='block'">
+            <p>Play Game</p>
+            <p>Play online game to level you up !!</p>
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <img src="../../assets/images/Social.jpg">
+          <a href="#" id="S" style="width:auto;" onclick="document.getElementById('id02').style.display='block'">
+            <p>Be A leisure !</p>
+            <p>Connect with your friends and Family!!</p>
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <img src="../../assets/images/News.jpg">
+          <a href="#" id="S" style="width:auto;" onclick="document.getElementById('id02').style.display='block'">
+            <p>News and Updates</p>
+            <p>Keep yourself update about current events !!</p>
+          </a>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+    </div>
+  </div>
+
+  <div style="background-color: black; position: relative" id="Section_3">
+
+    <div id="portfolio" class="container-fluid text-center bg-grey">
+      <h2 style="color: yellow; font: bold;font-size: 60px">WHO WE ARE ?</h2>
+      <div class="row text-center">
+        <div class="col-sm-3">
+          <div style="background-color: black; border:none" class="thumbnail">
+            <img src="../../assets/images/Ammar.JPG" alt="Random Name" width="200" height="150">
+            <p>
+              <strong style="color: yellow;">Ammar Bin Kamal</strong>
+            </p>
+            <p style="color: yellow;">BS in Computer Science</p>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div>
+            <p style="color: yellow; padding-top: 100px; text-align: center; font-style:Italic; font-family: Times New Roman, Times, serif; font-size: 30px;">
+              "A smart man only believes half of what he hears, a wise man knows which half."</p>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+
+        <div class="col-sm-9">
+          <div>
+            <p style="color: yellow; padding-top: 100px; text-align: center; font-style:Italic; font-family: Times New Roman, Times, serif; font-size: 30px;">
+              "Tears come from the heart and not from the brain."</p>
+
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div style="background-color: black; border:none" class="thumbnail">
+            <img src="../../assets/images/Areeb.jpg" alt="Random Name" width="200" height="150">
+            <p>
+              <strong style="color: yellow;">Areeb</strong>
+            </p>
+            <p style="color: yellow;">BS in Computer Science</p>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+
+
+
+  <footer id="footer_">
+    
+
+    <div style="background-color: white; width: auto; height: 10%">
+      <div class="row">
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-6">
+          <img style="width: 45px; height: 45px;" src="../../assets/images/Whatapp.png">
+          <img style="width: 50px; height: 50px;" src="../../assets/images/Fb.png">
+          <img style="width: 50px; height: 50px;" src="../../assets/images/Gmail.png">
+          <img style="width: 52px; height: 52px;" src="../../assets/images/twitter.png">
+
+        </div>
+        
+
+      </div>
+
+    </div>
+  </footer>
+
+
+</div>

@@ -1,0 +1,157 @@
+<div *ngFor="let acc of Accounts" style="border: 2px solid white; margin: 10px 0px;" >
+  <div id="Body_">
+    
+        <div style="background-color: black; width: 100%;color: yellow; border-bottom: 1px Solid White">
+          <div style="text-align:center; font-size: 12px;" class="row">
+
+            <div class="row">
+              <div class="col-sm-3">
+                <div style="height:169px; width:170px; border-radius: 20%; margin-left:10%; margin-top:5%; border: 1px solid Black; overflow: hidden">
+                  <img src="{{acc.ProfilePic}}" alt="Profile Picture" class="image" style="height:170px; width:170px;">
+                </div>
+                <div>
+                  <h1 id="NickName" style="font-style: oblique; margin-left:-20%;"> {{acc.FirstName}} </h1>
+                  <button (click)="makeAdmin(acc.Username, acc.Password)" style="color: black">Make admin</button>
+                </div>
+              </div>
+              <div class="col-sm-9" style="text-align:left">
+                My Name is
+                <h1 id="Name_" style="font-size: 30px"> {{acc.Username}}</h1>
+
+
+                I Believe that
+                <h1 id="Saying_" style="font-size: 30px">{{acc.Quote}} </h1>
+
+
+              </div>
+            </div>
+            <div style="border-bottom-width: 100px" class="row">
+              <div class="col-sm-12">
+                <h1 class="glyphicon glyphicon-user" id="Info" style="width:95%; background-color: black; cursor: pointer;color: White; border-color:white;text-align:left;">More Details
+                  <a id="A_D" href="#Info" style=" display: block; cursor: pointer; float: right" (click)="Show_UserInfo()">
+                    <img style="padding-top:2%; float: right" src="../../assets/images/Next.png" width="10%" height="13%">
+                  </a>
+                  <a id="A_U" href="#Body_" style="display: none; cursor: pointer; float: right" (click)="Show_UserInfo()">
+                    <img style="padding-top:2%;float: right" src="../../assets/images/Previous.jpg" width="10%" height="20%">
+                  </a>
+                </h1>
+
+              </div>
+            </div>
+            <div id="Info_" style="display: none; padding-left:10%; width: auto; height: auto; text-align:left" class="container">
+
+              <div style="width:90%;  border-bottom: 1px Solid Grey">
+
+                <table width="100%">
+                  <tr width="100%">
+                    <td width="50%">
+                      <h4>User Name:</h4>
+                      <h2 id="PN_" class="input_">
+                        <span class="AccD">{{acc.Username}}</span>
+                      </h2>
+                    </td>
+                    <td width="50%">
+                      <h4>NickName:</h4>
+                      <span id="PO_" class="input_">
+                        <span class="AccD"> {{acc.FirstName}}</span>
+                      </span>
+
+                    </td>
+                  </tr>
+                  <br />
+                  <tr width="100%">
+                    <td width="50%">
+                      <h4>Education:</h4>
+                      <span id="PE_" class="input_">
+                        <span class="AccD"> {{acc.Education}}</span>
+                      </span>
+                    </td>
+                    <td width="50%">
+                      <h4>Age:</h4>
+                      <span id="PS_" class="input_">
+                        <span class="AccD"> {{acc.Age}}</span>
+                      </span>
+
+                    </td>
+                </table>
+                <br />
+              </div>
+              <div style="width:90%; border-bottom: 1px Solid Grey">
+
+                <h3 width="100%">Level:</h3>
+                <span id="PO_" class="input_">
+                  <span class="AccD" style="width:100%; text-align:Center; font-size: 30px"> {{acc.Level}}</span>
+                </span>
+
+                <br />
+                <br />
+                <br />
+                <table width="100%">
+                  <tr width="100%">
+                    <td width="50%">
+                      <h4>Points:</h4>
+                      <span id="PE_" class="input_">
+                        <span class="AccD"> {{acc.Points}}</span>
+                      </span>
+                    </td>
+                    <td width="50%">
+                      <h4>Connections:</h4>
+                      <span id="PN_" class="input_">
+                        <span class="AccD" style="text-align:right">{{acc.Connections}}</span>
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+
+              </div>
+              <div>
+
+                <table width="100%">
+                  <tr width="100%">
+                    <td width="50%">
+                      <h4>Personality:</h4>
+                      <span id="PS_" class="input_">
+                        <span class="AccD"> {{acc.Personality}}</span>
+                      </span>
+                    </td>
+                    <td width="50%">
+                      <h4>Sports:</h4>
+                      <span id="PE_" class="input_">
+                        <span class="AccD"> {{acc.Sports}}</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr width="80%">
+                    <td width="30%">
+                      <h4>Movie:</h4>
+                      <span id="PE_" class="input_">
+                        <span class="AccD"> {{acc.Movie}}</span>
+                      </span>
+                    </td>
+                    <td width="30%">
+                      <h4>Season:</h4>
+                      <span id="PE_" class="input_">
+                        <span class="AccD"> {{acc.Season}}</span>
+                      </span>
+                    </td>
+                    <td width="30%">
+                      <h4>Songs:</h4>
+                      <span id="PE_" class="input_">
+                        <span class="AccD" style="float:left;"> {{acc.Song}}</span>
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+                <br />
+
+              </div>
+              <br />
+              <br />
+            </div>
+
+
+
+
+
+  </div>
+</div>

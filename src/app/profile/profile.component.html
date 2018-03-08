@@ -1,0 +1,376 @@
+<div id="Body_" style="width: auto;color: White; height:auto">
+
+
+
+  <div id="id01" style=" margin-top: -10px;">
+
+    <div style="width: 100%; height: 100px">
+      <ul style="margin-top: 1%">
+        <li style="display: inline-block; width: 15%; height: 100%">
+            <a routerLink="/home">
+              <img style="width:70px; height: 70px" src="../../assets/images/Home.png">
+            </a>
+        </li>
+        <li style="display: inline-block; width: 83%; height: 100%">
+            <a routerLink="/" style="text-decoration: none; color: black; float: right">
+              <button type="button" id="bootswatch-button" class="btn btn-outline-secondary"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
+          </a>
+        </li>
+      </ul>
+      
+
+    </div>
+    <div id="Back_" class="modal-content animate" style="margin: 3% auto 15% auto;width: 90%; height: auto; background-color: #444444; box-shadow: 5px 5px 5px 5px black;">
+      <h1 id="T1" style="text-align:center; width:100%;color:white; background-color: Black; font-size:50px">User Profile</h1>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="imgcontainer">
+            <form>
+              Select Picture:
+              <input id="fld1" type="file" name="pic" accept="image/*" (change)="fileEvent($event)">
+              <img style="width: 80%; height: auto; border-radius: 100% ; margin-left: 5%" src="{{profilePic}}">
+              
+              
+            </form>
+            <h1 id="NickName" style="font-style: oblique; text-align:center; padding-right:10%"> {{Firstname}} </h1>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <span style="font-size: 20px">My Name is</span>
+          <h1 id="Name_" style="font-size: 50px"> {{Username}}</h1>
+
+          <span style="font-size: 20px">I Believe that</span>
+          <h1 id="Saying_" style="font-size: 40px">{{quote}}</h1>
+
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div style="border:Solid 2px Black; margin-left:20%; Border-radius: 25px" class="col-sm-3">
+          <h1 width="90%" id="L2" style=" text-align: center; font: bold ;font-size: 20px;color: #000000 " type="text">
+            You are at
+            <span style="text-align:center; color: Yellow"> Level {{level}}</span>
+          </h1>
+
+
+        </div>
+        <div style="border:Solid 2px Black; margin-left:2%; Border-radius: 25px" class="col-sm-3">
+          <h1 width="90%" id="L2" style=" text-align: center; font: bold ;font-size: 25px;color: #000000 " type="text">
+            You have 
+            <span style="text-align:center; color: Yellow"> {{connections}}</span>
+            Connections
+          </h1>
+
+
+        </div>
+        <div style="border:Solid 2px Black; margin-left:2%; Border-radius: 25px" class="col-sm-3">
+          <h1 width="90%" id="L2" style=" text-align: center; font: bold ;font-size: 25px;color: #000000 " type="text">
+            Your Points are 
+            <span style="text-align:center; color: Yellow"> {{points}}</span>
+          </h1>
+
+
+        </div>
+      </div>
+
+
+
+      <div style="border-bottom-width: 100px" class="row">
+        <div class="col-sm-12">
+          <h1 class="glyphicon glyphicon-user" id="Info" style="width:100%; background-color: black; cursor: pointer;color: White; border-color:white;">User Info
+            <a id="A_D"  style=" display: block; cursor: pointer; float: right" onclick="Show_UserInfo()">
+              <img style="padding-top:2%; float: right" src="../../assets/images/Next.png" width="10%" height="13%">
+            </a>
+            <a id="A_U"  style="display: none; cursor: pointer; float: right" onclick="Show_UserInfo()">
+              <img style="padding-top:2%;float: right" src="../../assets/images/Previous.jpg" width="10%" height="20%">
+            </a>
+          </h1>
+
+
+
+        </div>
+      </div>
+
+      <div id="Info_" style="display: none; padding-left:10%; width: auto; height: auto" class="container">
+        <h4> <span class="glyphicon glyphicon-user"></span> User Name:</h4>
+        <h2 id="PN_" class="input_"> {{Username}}</h2>
+        <br />
+        <h4><span class="glyphicon glyphicon-user"></span>First Name:</h4>
+        <span id="PO_" class="input_">{{Firstname}}</span>
+        <br />
+        <h4> <span class="glyphicon glyphicon-education"></span> Education:</h4>
+        <span id="PS_" class="input_">{{education}}</span>
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+      </div>
+
+      <div style="border-bottom: 5px Black;" class="row">
+        <div class="col-sm-12">
+          <h1 class="glyphicon glyphicon-signal" id="Points" style="width: 100%; margin-top: -2px; cursor: pointer; float: left;color: White; border-color:white; background-color: black">Points and Level
+
+            <a id="P_D"  style="display: block; cursor: pointer; float: right" onclick="Show_Points_()">
+              <img style="padding-top:2%;float: right" src="../../assets/images/Next.png" width="10%" height="13%">
+            </a>
+            <a id="P_U"  style="display: none; cursor: pointer; float: right" onclick=" Show_Points_();">
+              <img style="padding-top:2%;float: right" src="../../assets/images/Previous.jpg" width="10%" height="20%">
+            </a>
+          </h1>
+        </div>
+      </div>
+      <div id="Points_" style="display: none; padding-left:10%; width: auto; height: auto" class="container">
+        <h1> <span class="glyphicon glyphicon-stats"></span> Level</h1>
+
+        <div id="L1">
+
+          <h1 width="100%" id="L2" style=" text-align: center; font: bold; background-color: #e5e5e5 ;font-size: 20px;color: #000000 "
+            type="text">
+            You are at
+          </h1>
+          <h1 style="text-align:center;  font: 40px bold"> Level {{level}}</h1>
+
+
+
+
+
+        </div>
+
+
+        <h1> <span class="	glyphicon glyphicon-plus-sign"></span>Your Points</h1>
+
+        <h3 style="text-align:center"> Overall Points </h3>
+        <div style="border: 20px" class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+            style="width:40%">
+            40% Overall Points
+          </div>
+        </div>
+
+
+        <h3 style="text-align:center"> Points In Different Categories </h3>
+        <div class="progress">
+          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+            50% In Sports
+          </div>
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+            style="width:70%">
+            70% In Science
+          </div>
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+            style="width:65%">
+            65% In Maths
+          </div>
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar progress-bar-succes" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+            style="width:75%">
+            75% In History
+          </div>
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+            50% In IQ
+          </div>
+        </div>
+
+
+      </div>
+
+      <div style="border-bottom: 5px Black;" class="row">
+        <div class="col-sm-12">
+          <h1 class="glyphicon glyphicon-film" id="Interest" style="width:100%; margin-top: -2px; cursor: pointer; float: left; color: White; border-color:white; background-color: black">Interest
+            <a id="I_D"  style="display: block; cursor: pointer; float: right" onclick="Show_Interest()">
+              <img style="padding-top:2%; float: right" src="../../assets/images/Next.png" width="10%" height="13%">
+            </a>
+            <a id="I_U"  style="display: none; cursor: pointer; float: right" onclick="Show_Interest()">
+              <img style="padding-top:2%; float: right" src="../../assets/images/Previous.jpg" width="10%" height="20%">
+            </a>
+          </h1>
+        </div>
+
+        <div id="Interest_" style="display: none; padding-left:10%; width: auto; height: auto" class="container">
+          <h1 style="text-align:center"> I'm Interested In </h1>
+
+          <h4>Sports:</h4>
+          <span id="ISport_" class="input_"> {{sports}}</span>
+          <br />
+          <h4> Season/Serial:</h4>
+          <span id="ISeason_" class="input_">{{season}}</span>
+          <br />
+          <h4> Movie:</h4>
+          <span id="IMovie_" class="input_">{{movie}}</span>
+          <br />
+          <h4>Song:</h4>
+          <span id="ISong_" class="input_">{{song}}</span>
+          <br />
+          <h4>Personality:</h4>
+          <span id="IPersonality_" class="input_">{{personality}}</span>
+          <br />
+          <br />
+          <br />
+
+
+        </div>
+
+      </div>
+
+
+      <div style="border-bottom: 5px Black;" class="row">
+        <div class="col-sm-12">
+          <h1 class="glyphicon glyphicon-cog" id="Settings" style="width:100%; margin-top: -2px; margin-bottom:40px; cursor: pointer; color: White; border-color:white; background-color: Black">Settings
+            <a id="S_D"  style="display: block; cursor: pointer; float: right" onclick="Show_Settings()">
+              <img style="padding-top:2%; float: right" src="../../assets/images/Next.png" width="10%" height="13%">
+            </a>
+            <a id="S_U"  style="display: none; cursor: pointer; float: right" onclick="Show_Settings()">
+              <img style="padding-top:2%;float: right" src="../../assets/images/Previous.jpg" width="10%" height="20%">
+            </a>
+          </h1>
+        </div>
+        <div id="Settings_" style="display: none; padding-left:10%; color:black; width: auto; height: auto" class="container">
+          <h1 style="text-align:center"> </h1>
+
+          <h4 class="glyphicon glyphicon-pencil">UserName:</h4>
+          <input id="CN_" class="St" value="{{Username}}" [(ngModel)]="Username">
+          <br>
+          <a class="glyphicon glyphicon-pencil" id="change-password" (click)="change_password()">Change Password:</a>
+          <span id="confirmPasswordButton" style="display: none">
+            <input id="CN_" class="St" placeholder="Enter password" [(ngModel)]="EnteredPassword" name="CurrentPassword" value="pw">
+            
+            <button style="margin-left: 20%" (click)="enter()">enter</button>
+          </span>
+          <span id="wrongPrompt" style="color: Red; font-size: 20px; display: none; margin-left: 20%">Wrong password</span>
+          <input id="CN_1" class="St" value="{{Username}}" style="display: none" placeholder="Enter new Password" [(ngModel)]="newPassword" name="newPw">
+          <input id="CN_2" class="St" value="{{Username}}" style="display: none" placeholder="Confirm Password" [(ngModel)]="confirmPassword" name="confirmPw">
+          <button id="done" style="display: none; margin-left: 20%" (click)="done()">Done</button>
+          <span id="passwordMismatch" style="color: Red; font-size: 20px; display: none;margin-left: 20%">Password donot match</span>
+          <span id="passwordMatch" style="color: green; font-size: 20px; display: none;margin-left: 20%">Password changed</span>
+          <br>
+          <br>
+          <h4 class="glyphicon glyphicon-pencil">Edit NickName:</h4>
+          <input id="CNN_" class="St" value="{{Username}}" [(ngModel)]="Firstname">
+          <h4 class="glyphicon glyphicon-text-background"> Change Color Theme:</h4>
+          <div style="margin-left: 20%; margin-right:20%;background-color: Grey">
+            <h3>Overall Theme: </h3>
+            <input type="color" id="CC_" placeholder="~Select Color" style="height: 100%; background-color:Black; border-bottom:0px"
+              value="#000000" class="St">
+            <h3>Background Color:</h3>
+            <input type="color" id="CBC_" placeholder="~Select Color" style="height: 100%; background-color: #444444; border-bottom:0px"
+              value="#444444" class="St">
+            <h3>Text Color: </h3>
+            <input type="color" id="CTC_" placeholder="~Select Color" style="height: 100%; background-color:White; border-bottom:0px"
+              value="#ffffff" class="St">
+
+          </div>
+          <h4 class="glyphicon glyphicon-font"> Update Saying:</h4>
+          <input id="CS_" class="St" value="" [(ngModel)]="quote">
+
+          <h4 class="glyphicon glyphicon-picture" style="text-align:center"> Edit Your Interest :</h4>
+          <span id="CI_" style="background-color: #f1f7f6;" class="input_">
+
+            <h3 style="text-align:center"> I'm Interested In </h3>
+
+            <h4>Sports:</h4>
+            <input id="CSports" class="St" value="" [(ngModel)]="sports">
+
+            <h4> Season/Serial:</h4>
+            <input id="CSeason" class="St" value="" [(ngModel)]="season" >
+
+            <h4> Movie:</h4>
+            <input id="CMovie" class="St" value="" [(ngModel)]="movie">
+
+            <h4>Song:</h4>
+            <input id="CSong" class="St" value="" [(ngModel)]="song">
+
+            <h4>Personality:</h4>
+            <input id="CPersonality" class="St" value="" [(ngModel)]="personality">
+            <br />
+
+          </span>
+          <br />
+          <br />
+
+
+          <a >
+            <button id="U" style=" margin-bottom:2%; width:20%; margin-right: 5px; float:right; border:0; color:Black" onclick="Show_Settings(); Show_Settings()">
+            Cancel </button>
+          </a>
+          <a >
+            <button id="U" style=" margin-bottom:2%; width:20%; height: 20%;margin-right: 5px; float:right; border:0; color:Black"
+              (click)="ApplyChanges()" onclick="Show_Settings()"> Apply Changes </button>
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+    
+
+  </div>
+
+
+
+
+</div>
+
+<div style="width: 100%; height: 100px">
+  <h1 style="width:30%; margin: 0% 35%; text-align: center; font-size: 50px; color: white">See Your Post</h1>
+</div>
+
+<div id="post-body" *ngFor="let post of Postlist">
+  <ul class="post-list">
+      <li class="post-list-items" id="left">
+          <div id="left-block">
+              <ul class="left-block-list">
+                  <li class="left-block-list-big">
+                      <div class="picture-host">
+                          <a class="text" style="height: 160px; width: 160px">
+                            <img src="{{post.profilePicture}}" alt="image" style="height: 160px; width: 160px; float: left">
+                          </a>
+                      </div>
+                  </li>
+                  <li class="left-block-list-small">
+                      <div class="action" id="like"  #like (click)="LikeReaction(like, post.caption, post.imageurl, post.likes, post.comments, post.shares, post.userid, post.id)">
+                          <a class="text">{{post.likes}}</a>
+                      </div>
+                  </li>
+                  <li class="left-block-list-small">
+                      <div class="action" id="comment" #comment (click)="CommentReaction(comment, post.caption, post.imageurl, post.likes, post.comments, post.shares, post.userid, post.id)">
+                          <a class="text">{{post.comments}}</a>
+                      </div>
+                  </li>
+                  <li class="left-block-list-small">
+
+                      <div class="action" id="share" #share (click)="ShareReaction(share, post.caption, post.imageurl, post.likes, post.comments, post.shares, post.userid, post.id)">
+                          <a class="text">{{post.shares}}</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </li>
+      <li class="post-list-items" id="right">
+          <div id="right-block">
+              <div class="image">
+                  <img src="{{post.imageUrl}}" alt="postImage" style="max-width: 100%">
+              </div>
+              <div class="caption">
+                  <p class="text" style="font-size: 20px">{{post.caption}}</p>
+              </div>
+          </div>
+      </li>
+  </ul>
+</div>

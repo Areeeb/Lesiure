@@ -1,0 +1,47 @@
+<div id="post-body" *ngFor="let post of Postlist">
+    <ul class="post-list">
+        <li class="post-list-items" id="left">
+            <div id="left-block">
+                    <button style=" color: Black; Background-color:Red; border:0px" (click)="deletePost(post.id, post.caption, post.imageUrl, post.likes, post.comments, post.shares, post.userid, post.profilePicture)">Remove Post</button>
+                    
+                <ul class="left-block-list">
+                    <li class="left-block-list-big">
+                        
+                        <div class="picture-host">
+                                
+                            <a class="text" style="height: 160px; width: 160px">
+                                <img src="{{post.profilePicture}}" alt="image" style="height: 160px; width: 160px; float: left">
+                            </a>
+                        </div>
+                    </li>
+                    <li class="left-block-list-small">
+                        <div class="action" id="like"  #like (click)="LikeReaction(like, post.caption, post.imageUrl, post.likes, post.comments, post.shares, post.userid, post.id)">
+                            <a class="text">{{post.likes}}</a>
+                        </div>
+                    </li>
+                    <li class="left-block-list-small">
+                        <div class="action" id="comment" #comment (click)="CommentReaction(comment, post.caption, post.imageUrl, post.likes, post.comments, post.shares, post.userid, post.id)">
+                            <a class="text">{{post.comments}}</a>
+                        </div>
+                    </li>
+                    <li class="left-block-list-small">
+
+                        <div class="action" id="share" #share (click)="ShareReaction(share, post.caption, post.imageUrl, post.likes, post.comments, post.shares, post.userid, post.id)">
+                            <a class="text">{{post.shares}}</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="post-list-items" id="right">
+            <div id="right-block">
+                <div *ngIf="post.imageUrl" class="image">
+                    <img src="{{post.imageUrl}}" alt="Image" style="max-width: 100%">
+                </div>
+                <div *ngIf="post.caption" class="caption">
+                    <p class="text" style="font-size: 20px">{{post.caption}}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

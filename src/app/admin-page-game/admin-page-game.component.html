@@ -1,0 +1,66 @@
+<div id="Body_">
+
+    <div style="border-radius: 1%; margin:5% 5% 5% 5%; color: white; background-color: Black; box-shadow: 8px 8px 8px 5px Grey;"
+        id="contact" class="container-fluid bg-grey">
+        <form>
+            <h1 style="text-align: center; color: White; font-size: 300%; text-shadow: 3px 1px Teal;">Add New Question</h1>
+            <br/>
+            <br/>
+            <br/>
+
+
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <input class="form-control" id="S" style="color: black" placeholder="~Enter Question Here" type="text" required [(ngModel)]="question" name="question">
+                </div>
+            </div>
+
+            <h2 style="text-align: center; color: White;">Enter Options</h2>
+            <br/>
+
+            <div class="row">
+                <div class="col-sm-3 form-group">
+                    <input class="form-control" id="S" style="color: black" placeholder="~Option A" type="text" required [(ngModel)]="option1"  name="option1">
+
+                </div>
+                <div class="col-sm-3 form-group">
+                    <input class="form-control" id="S" style="color: black" placeholder="~Option B" type="text" required [(ngModel)]="option2"  name="option2">
+
+                </div>
+                <div class="col-sm-3 form-group">
+                    <input class="form-control" id="S" style="color: black" placeholder="~Option C" type="text" required [(ngModel)]="option3"  name="option3">
+
+                </div>
+                <div class="col-sm-3 form-group">
+                    <input class="form-control" id="S" style="color: black" placeholder="~Option D" type="text" required [(ngModel)]="option4"  name="option4">
+
+                </div>
+
+            </div>
+
+            <br/>
+            <h2 style="text-align: center; color: White;">Enter Correct Answer</h2>
+            <br/>
+            <div class="row">
+                <div class="col-sm-8 form-group" style="margin-left:20%;margin-right:10%;">
+                    <input class="form-control" id="S" style="color: black" placeholder="~Enter Answer Here" type="text" required  [(ngModel)]="answer" name="answer">
+                </div>
+            </div>
+
+            <a style="text-decoration: none">
+                <button id="Change" type="Reset">Clear All</button>
+            </a>
+            <a style="text-decoration: none" (click)="postQuestion()">
+                <button id="Change">Post Question</button>
+            </a>
+
+
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+
+        </form>
+    </div>
+
+</div>

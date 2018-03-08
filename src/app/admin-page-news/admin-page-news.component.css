@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 7, 2017, 10:31:05 PM
+    Author     : Areeb
+*/
+
+.news-body{
+    height: 441px;
+    width: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    float: left;
+    border: 2px solid white;
+}
+
+.news-body .image{
+    height: 440px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.news-body .article{
+    position: relative;
+    width: 26%;
+    height: 20%;
+    bottom: 440px;
+    margin: 136.4px 37%;
+    float: left;
+    color: white;
+    text-align: center;
+}
+
+.news-body .article .content{
+    width: 100%;
+}
+
+.news-body .article .link-div .button-link{
+    position: relative;
+    top: 10px;
+    border:1px solid white;
+    padding: 8px 5px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.news-body .article .link-div .button-link:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}

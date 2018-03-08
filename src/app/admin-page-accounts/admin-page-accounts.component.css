@@ -1,0 +1,24 @@
+.image {
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+}
+
+.AccD{
+   width: 60%;
+    position: relative;
+    font-size: 25px;
+    display: inline-block;
+    border: 0px #ccc;
+    box-sizing: border-box;
+    float: center;
+    color: Teal;
+
+  }
+  
+  #Body_ {
+    margin: 0;
+    padding: 0;
+	width: auto;
+	height: auto;
+}

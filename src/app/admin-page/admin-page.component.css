@@ -1,0 +1,196 @@
+#mega-container{
+    width: 100%;
+    height: 1500px;
+}
+
+#header{
+	height: 15%;
+	width: 100%;
+}
+
+#header .head-div{
+	height: 100%;
+	width: 100%;
+}
+
+#header .head-div  .head-list{
+    height: 100%;
+    width: 100%;
+    /*display: box;*/
+    display: flex;
+    padding: 0 0;
+    margin: 0;
+}
+
+#header .head-div  .head-list .head-list-item{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0px 50px;;
+    float:left;
+    height: 100%;
+}
+
+#header .head-div  .head-list .head-list-item #logo{
+    background-image: url("logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*display: box;*/
+    display: flex;
+    margin: 30% 0%;
+    height: 60px;
+    width: 200px;
+    text-align: center;
+    color: white;
+}
+
+#header .head-div  .head-list .head-list-item #logo .logo-image{
+    /*display: box;*/
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0px 0px;
+}
+
+#header .head-div  .head-list .head-list-item #dp{
+    /*display: box;*/
+    display: flex;
+    margin: 10% 0%;
+    padding: 0;
+    border-radius: 100%;
+    height: 170px;
+    width: 170px;
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+#header .head-div  .head-list .head-list-item #profile-description{
+    height: 100%;
+    width: 600px;
+    color: white;
+}
+
+#header .head-div  .head-list .head-list-item #profile-description .profile-description-items{
+    width: 100%;
+    float: left;
+}
+
+#header .head-div  .head-list .head-list-item #profile-description .profile-description-items .profile-description-list-items{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+#header .head-div  .head-list .head-list-item #profile-description .profile-description-items .profile-description-list-items .profile-list-values{
+    width: 100%;
+    /*display: box;*/
+    margin: 20% 0%;
+    padding: 0;
+}
+
+#header .head-div  .head-list .head-list-item #profile-description .profile-description-items .profile-description-list-items .profile-list-values .profile-list-values-items{
+    list-style-type: none;
+    padding: 15px 0px;
+    color: white;
+    font-size: 15px;
+}
+
+#header .head-div  .head-list .head-list-item #profile-description .profile-list{
+    width: 100%;
+    /*display: box;*/
+    margin: 20% 0%;
+    padding: 0;
+}
+
+#header .head-div  .head-list .head-list-item #profile-description .profile-list .profile-list-item{
+    list-style-type: none;
+    padding: 5px 0px;
+    color:yellow;
+    padding: 15px 0px;
+    font-size: 15px;
+}
+
+#bootswatch-item{
+    width: 60%;
+}
+
+#bootswatch-button{
+    margin-top: 30px;
+    padding: 10px 20px;
+    float: right;
+}
+
+#bootswatch-button:hover{
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+}
+
+#body{
+    height: 75%;
+    width: 100%;
+    text-align: center;
+}
+
+#body .nav{
+    margin: 1px 10%;
+    height: 5%;
+    width: 80%;
+    text-align: center;
+}
+
+#body .nav .in-nav{
+    height: 100%;
+    width: 90%;
+    margin: 0% 4% 0% 4%;
+    float: left;
+    min-width: 90%;
+}
+
+#body .nav .in-nav .nav-list{
+    /*display: box;*/
+    height: 100%;
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0% 0%;
+}
+
+#body .nav .nav-list .nav-list-item{
+    display: inline-block;
+    list-style-type: none;
+    padding: 26px 10.1%;
+    color: white;
+}
+
+#body .nav .nav-list .nav-list-item .nav-links{
+    text-decoration: none;
+    color: white;
+}
+
+#body .nav .nav-list .nav-list-item .nav-links:hover{
+    color: yellow;
+}
+
+
+#body #internal-body{
+    position: relative;
+    top: 20px;
+    width: 80%;
+    height: 92%;
+    margin: 0% 10%;
+    border: 1px solid white;
+    color: white;
+    overflow-y: scroll;
+    border-radius: 1%;
+}
+
+#footer {
+    margin: 0px;
+    height: 10%;
+    width: 100%;
+    background-color: #333333;
+    color: white;
+}
